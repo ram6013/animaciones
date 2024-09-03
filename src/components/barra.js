@@ -1,12 +1,15 @@
 import React from "react";
-import { motion } from "framer-motion";
 import Botones from "./botones";
-const Barra = ()=>(
+
+const Barra = ({ onPageChange }) => {
+  return (
     <div className="flex justify-around w-full">
-        <Botones text={"Telefonos"}/>
-        <Botones text ={"Ordenadores"}/>
-        <Botones text ={"Tablets"}/>
-        <Botones text={"Cascos"}/>
+      <Botones text="Telefonos" onClick={() => onPageChange("Telefonos")} />
+      <Botones text="Ordenadores" onClick={() => onPageChange("Ordenadores")} />
+      <Botones text="Tablets" onClick={() => onPageChange("Tablets")} />
+      <Botones text="Cascos" onClick={() => onPageChange("Cascos")} />
     </div>
-)
-export default Barra
+  );
+};
+
+export default Barra;
